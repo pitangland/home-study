@@ -29,24 +29,18 @@ public class dp30_1463 {
 		Scanner scan = new Scanner(System.in);
 		
 		int N = scan.nextInt();
-		int count = 0;
+		int dy[] = new int[N+1];
 		
-		while(N == 1) {
-			
-			if(N%3 == 0) {
-				N /= 3;
-				count++;
-			} else if(N%2 == 0) {
-				N /= 2;
-				count++;
-			} else {
-				N -= 1;
-				count++;
-			}
-			
-		}
+		dy[0] = 0;
+		dy[1] = 0;
 		
-		System.out.println(count);
+		for (int i = 2; i <= N; i++){
+	           dy[i] = dy[i-1] + 1;
+	           if (i % 2 == 0) dy[i] = Math.min(dy[i], dy[i/2] + 1);
+	           if (i % 3 == 0) dy[i] = Math.min(dy[i], dy[i/3] + 1);
+	       }
+		
+		System.out.println(dy[N]);
 		
 		scan.close();
 		
