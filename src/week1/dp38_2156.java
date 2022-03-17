@@ -41,6 +41,25 @@ public class dp38_2156 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int N = Integer.parseInt(br.readLine());
+		int[] arr = new int[N+1];
+		int[] dy = new int[N+1];
+		
+		for(int i = 1; i <= N; i++) {
+			arr[i] = Integer.parseInt(br.readLine());
+		}
+		
+		// 초기화
+		dy[1] = arr[1];
+		if(N > 1) dy[2] = Math.max(arr[1]+arr[2], arr[2]);
+		
+		for(int i = 3; i <= N; i++) {
+			// 점화식
+			//				연속x    ,          연속2잔(앞에 인덱스와 연속2잔), 연속2잔 (뒤에 인덱스와 연속2잔)
+			dy[i] = Math.max(dy[i-1], Math.max(dy[i-3]+arr[i-1]+arr[i], dy[i-2]+arr[i]));
+		}
+		
+		System.out.println(dy[N]);
+		 
 		
 		br.close();
 		
