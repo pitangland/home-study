@@ -22,7 +22,7 @@ public class io25_2445 {
 			**      **
 			***    ***
 			****  ****
-			**********
+			**********	// 여기까지 상단이라함.
 			****  ****
 			***    ***
 			**      **
@@ -33,6 +33,40 @@ public class io25_2445 {
 		Scanner scan = new Scanner(System.in);
 		
 		int N = scan.nextInt();
+		
+		// 상단
+		for(int i = 0; i < N; i++) {
+			for(int j = 0; j <= i; j++) {
+				System.out.print("*");
+			}
+			for(int k = N; k > i+1; k--) {
+				System.out.print(" ");
+			}
+			for(int k = N; k > i+1; k--) {
+				System.out.print(" ");
+			}
+			for(int j = 0; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		// 하단
+		for(int i = 0; i < N-1; i++) {
+			for(int k = N; k > i+1; k--) {
+				System.out.print("*");
+			}
+			for(int j = 0; j <= i; j++) {
+				System.out.print(" ");
+			}
+			for(int j = 0; j <= i; j++) {
+				System.out.print(" ");
+			}
+			for(int k = N; k > i+1; k--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 		
 		scan.close();
 		
