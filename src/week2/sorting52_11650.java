@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
 public class sorting52_11650 {
 
@@ -37,7 +38,15 @@ public class sorting52_11650 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
+		int N = Integer.parseInt(br.readLine());
 		
+		// 람다식을 이용하면 쉽다는데 .. ? 어렵다.. ! 
+		
+		StringTokenizer st;
+		for(int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine(), " ");
+			
+		}
 		
 		
 		
