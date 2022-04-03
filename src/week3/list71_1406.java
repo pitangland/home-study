@@ -3,8 +3,9 @@ package week3;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class list71_2406 {
+public class list71_1406 {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -54,7 +55,19 @@ public class list71_2406 {
 		 */
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st;
 		
+		st = new StringTokenizer(br.readLine(), " ");
+		
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+		int[][] marr = new int[m][m];
+		
+		for(int i = 0; i < m; i++) {
+			st = new StringTokenizer(br.readLine(), " ");
+			
+			
+		}
 		
 		
 		br.close();
